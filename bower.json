@@ -1,0 +1,23 @@
+{
+  "name": "3.3-clock",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cbotwell/3.3-clock",
+  "authors": [
+    "Corbin Otwell <cbotwell@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset-css": "~2.0.2011012602",
+    "neat": "~1.7.2",
+    "handlebars": "~3.0.3",
+    "fontawesome": "~4.3.0",
+    "jquery": "~2.1.4"
+  }
+}
