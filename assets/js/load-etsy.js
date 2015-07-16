@@ -11,9 +11,7 @@ var loadEtsy = function (query, onload, immediate) {
         url: url,
         jsonp: 'callback',
         dataType: 'jsonp',
-        success: function (data) {
-            onload(data.results);
-        }
+        success: onload
     });
 
     immediate();
