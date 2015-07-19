@@ -1856,7 +1856,8 @@ html {
 body {
   max-width: 100%;
   position: relative;
-  background: #F5F5F1; }
+  background: #F5F5F1;
+  font-family: Arial, sans-serif; }
 
 .top-bar {
   max-width: 100%;
@@ -1867,12 +1868,12 @@ body {
   margin-right: 2.35765%;
   width: 100%;
   position: relative;
-  display: inline-block;
   background: white;
   font-family: monospace;
   font-size: 1.5em;
   border-bottom: 3px solid #EAEAEA;
-  padding: 0 130px; }
+  padding: 0 130px;
+  height: 80px; }
   .top-bar::after {
     clear: both;
     content: "";
@@ -1880,31 +1881,89 @@ body {
   .top-bar:last-child {
     margin-right: 0; }
 
+.left-side {
+  position: inline; }
+
 #logo {
   color: #F56400;
   font-size: 1.5em;
-  float: left; }
+  float: left;
+  padding: 20px; }
 
-.searchbox {
+.browse {
+  padding: 22px;
   float: left; }
+  .browse span {
+    margin: 0;
+    padding: 5px 15px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #5D5D5D;
+    border: solid 1px #C0C0C0;
+    background: #ffffff;
+    border-radius: 5px 5px; }
 
-#browse {
-  float: left; }
+#tfnewsearch {
+  float: left;
+  padding: 20px; }
+
+.tftextinput {
+  margin: 0;
+  padding: 5px 15px;
+  font-size: 14px;
+  border: 1px solid #0076a3;
+  border-top-left-radius: 5px 5px;
+  border-bottom-left-radius: 5px 5px; }
+
+.tfbutton {
+  margin: 0;
+  padding: 5px 15px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 1px #0076a3;
+  background: #0095cd;
+  border-top-right-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px; }
 
 .button:hover {
   background-color: #fafafa;
   color: #207cca; }
 
-.left-side {
-  float: right; }
-  .left-side h1 {
-    float: right; }
+.right-side {
+  display: inline-block;
+  padding: 20px 0 0 20px; }
+  .right-side span {
+    display: inline;
+    padding: 20px 5px;
+    color: #0192B5;
+    font-size: 0.7em; }
+  .right-side #signin {
+    border: solid 1px #0076a3;
+    margin: 0;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #5D5D5D;
+    border: solid 1px #C0C0C0;
+    background: #ffffff;
+    border-radius: 5px 5px; }
+  .right-side i {
+    font-size: 0.7em; }
 
 .main-body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  background: #F5F5F1; }
+  background: #F5F5F1;
+  border-bottom: 3px solid #EAEAEA;
+  padding-bottom: 30px; }
   .main-body::after {
     clear: both;
     content: "";
@@ -1914,13 +1973,34 @@ body {
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    border: 2px solid #EAEAEA;
-    background: white; }
+    padding: 20px 0; }
     .main-body .left-column:last-child {
       margin-right: 0; }
     .main-body .left-column a {
       text-decoration: none;
       color: #0192B5; }
+    .main-body .left-column h6 {
+      font-weight: strong; }
+  .main-body .categories {
+    border: 2px solid #EAEAEA;
+    background: white;
+    padding-bottom: 20px;
+    line-height: 25px; }
+    .main-body .categories h6 {
+      padding: 10px 0 0 10px; }
+    .main-body .categories ul {
+      padding-left: 20px; }
+  .main-body .refinesearch {
+    border: 2px solid #EAEAEA;
+    background: white;
+    padding: 10px 0;
+    display: block; }
+    .main-body .refinesearch form {
+      border-bottom: 3px solid #EAEAEA; }
+    .main-body .refinesearch .price {
+      border-bottom: 3px solid #EAEAEA; }
+      .main-body .refinesearch .price input {
+        width: 100%; }
   .main-body .listings {
     float: left;
     display: block;
@@ -1936,7 +2016,12 @@ body {
     width: 31.76157%;
     border: 2px solid #EAEAEA;
     background: white;
-    max-width: 225px;
+    width: 225px;
+    margin-bottom: 20px;
+    border-top-right-radius: 5px 5px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
     font-size: 0.7em; }
     .main-body article:last-child {
       margin-right: 0; }
@@ -1945,7 +2030,9 @@ body {
     .main-body article:nth-child(3n+1) {
       clear: left; }
     .main-body article img {
-      width: 100%; }
+      width: 100%;
+      border-top-right-radius: 5px 5px;
+      border-top-left-radius: 5px 5px; }
     .main-body article h2 {
       padding-bottom: 5px;
       text-overflow: ellipsis;
