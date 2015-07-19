@@ -14,3 +14,99 @@ html {
 }
 
 // Your SASS Journey Starts Here
+
+body {
+    max-width: 100%;
+    position: relative;
+    background: #F5F5F1;
+}
+.top-bar {
+    @include outer-container (100%);
+    @include span-columns (12);
+    position: relative;
+    display: inline-block;
+    background: white;
+    font-family: monospace;
+    font-size: 1.5em;
+    border-bottom: 3px solid #EAEAEA;
+    padding: 0 130px;
+}
+    #logo {
+        color: #F56400;
+        font-size: 1.5em;
+        float: left;
+    }
+    .searchbox {
+        float: left;
+    }
+    #browse {
+        float: left;
+    }
+
+
+    .button:hover  {
+        background-color:#fafafa;
+        color:#207cca;
+    }
+.left-side {
+    float: right;
+    h1 {
+        float: right;
+    }
+}
+
+
+.main-body {
+    @include outer-container(960px);
+    background: #F5F5F1;
+
+    .left-column {
+        @include span-columns (3);
+        border: 2px solid #EAEAEA;
+        background: white;
+        a {
+            text-decoration: none;
+            color: #0192B5;
+        }
+    }
+    .listings {
+        @include span-columns(9);
+        @include omega();
+    }
+
+    article {
+        @include span-columns(4);
+        @include omega(3n);
+        border: 2px solid #EAEAEA;
+        background: white;
+        max-width: 225px;
+
+        font-size: 0.7em;
+        img {
+            width: 100%;
+        }
+        h2 {
+            padding-bottom: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: #EAEAEA;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .price {
+            color: #79C043;
+            float: right;
+        }
+        .article-body {
+            @include span-columns (4);
+            @include omega(3n);
+            margin-bottom: 10px;
+            width: 33.33%;
+        }
+    }
+}

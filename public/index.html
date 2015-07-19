@@ -5,9 +5,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="app.css">
-    <title>Etsy </title>
+    <title>Etsy</title>
 </head>
 <body>
+    <div class="top-bar">
+        <h1 id="logo">Etsy</h1>
+    <form id="searchbox" action="">
+        <input id="search" type="text" placeholder="Type here">
+        <input id="submit" type="submit" value="Search">
+    </form>
+        <button id="browse">Browse</button>
+    <div class="left-side">
+        <h1>Sign In</h1>
+        <h1>Register</h1>
+    </div>
+    </div>
+    <div class="main-body">
+        <div class="left-column">
+            <h6>All Categories</h6>
+            <ul>
+            <li><a href="#">Home and Living</a></li>
+            <li><a href="#">Art and Collectibles</a></li>
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Paper and Party Supplies</a></li>
+            <li><a href="#">Accessories</a></li>
+            </ul>
+        </div>
+        <div class="listings"></div>
+
+        <template id="main-template">
+            {{#each results}}
+                {{> article article=this }}
+            {{/each}}
+        </template>
+
+        <template id="article-partial">
+            <article>
+                <img src="{{ article.Images.[0].url_fullxfull }}" alt="Whiskey">
+                <h2>{{ article.title }}</h2>
+                <a href ="{{ url }}">{{ article.Shop.shop_name }}</a>
+                <div class="price">{{ article.price }} {{ article.currency_code }}</div>
+            </article>
+        </template>
+    </div>
+
 
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="handlebars/handlebars.js"></script>
