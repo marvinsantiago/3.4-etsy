@@ -19,56 +19,148 @@ body {
     max-width: 100%;
     position: relative;
     background: #F5F5F1;
+    font-family: Arial, sans-serif;
 }
 .top-bar {
     @include outer-container (100%);
     @include span-columns (12);
     position: relative;
-    display: inline-block;
     background: white;
     font-family: monospace;
     font-size: 1.5em;
     border-bottom: 3px solid #EAEAEA;
     padding: 0 130px;
+    height: 80px;
 }
-    #logo {
-        color: #F56400;
-        font-size: 1.5em;
-        float: left;
-    }
-    .searchbox {
-        float: left;
-    }
-    #browse {
-        float: left;
-    }
 
+.left-side {
+    position: inline;
+    }
+#logo {
+    color: #F56400;
+    font-size: 1.5em;
+    float: left;
+    padding: 20px;
+    }
+.browse {
+    padding: 22px;
+    float: left;
+    span    {
+        margin: 0;
+        padding: 5px 15px;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        color: #5D5D5D;
+        border: solid 1px #C0C0C0;
+        background: #ffffff;
+        border-radius: 5px 5px;
+    }
+}
 
+    #tfnewsearch {
+        float: left;
+        padding: 20px;
+    }
+    .tftextinput {
+        margin: 0;
+        padding: 5px 15px;
+        font-size: 14px;
+        border: 1px solid #0076a3;
+        border-top-left-radius: 5px 5px;
+        border-bottom-left-radius: 5px 5px;
+    }
+    .tfbutton {
+        margin: 0;
+        padding: 5px 15px;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        border: solid 1px #0076a3;
+        background: #0095cd;
+        border-top-right-radius: 5px 5px;
+        border-bottom-right-radius: 5px 5px;
+    }
     .button:hover  {
         background-color:#fafafa;
         color:#207cca;
     }
-.left-side {
-    float: right;
-    h1 {
-        float: right;
+    .right-side {
+        display: inline-block;
+        padding: 20px 0 0 20px;
+            span {
+            display: inline;
+            padding: 20px 5px;
+            color: #0192B5;
+            font-size: 0.7em;
+        }
+        #signin {
+            border: solid 1px #0076a3;
+            margin: 0;
+            padding: 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #5D5D5D;
+            border: solid 1px #C0C0C0;
+            background: #ffffff;
+            border-radius: 5px 5px;
+        }
+        i {
+            font-size: 0.7em;
+        }
     }
-}
 
 
 .main-body {
     @include outer-container(960px);
     background: #F5F5F1;
+    border-bottom: 3px solid #EAEAEA;
+    padding-bottom: 30px;
 
     .left-column {
         @include span-columns (3);
-        border: 2px solid #EAEAEA;
-        background: white;
+        padding: 20px 0;
+
         a {
             text-decoration: none;
             color: #0192B5;
         }
+        h6 {
+            font-weight: strong;
+        }
     }
+        .categories {
+            border: 2px solid #EAEAEA;
+            background: white;
+            padding-bottom: 20px;
+            line-height: 25px;
+            h6 {
+                padding: 10px 0 0 10px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+        }
+        .refinesearch {
+            border: 2px solid #EAEAEA;
+            background: white;
+            padding: 10px 0;
+            display: block;
+            form {
+                border-bottom: 3px solid #EAEAEA;
+            }
+            .price {
+                border-bottom: 3px solid #EAEAEA;
+                input {
+                    width: 100%;
+                }
+            }
+        }
     .listings {
         @include span-columns(9);
         @include omega();
@@ -79,11 +171,17 @@ body {
         @include omega(3n);
         border: 2px solid #EAEAEA;
         background: white;
-        max-width: 225px;
-
+        width: 225px;
+        margin-bottom: 20px;
+        border-top-right-radius: 5px 5px;
+        border-top-left-radius: 5px 5px;
+        border-bottom-left-radius: 5px 5px;
+        border-bottom-right-radius: 5px 5px;
         font-size: 0.7em;
         img {
             width: 100%;
+            border-top-right-radius: 5px 5px;
+            border-top-left-radius: 5px 5px;
         }
         h2 {
             padding-bottom: 5px;
@@ -110,3 +208,7 @@ body {
         }
     }
 }
+
+
+
+
