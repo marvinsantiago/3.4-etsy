@@ -119,7 +119,7 @@
 
         <template id="article-partial">
             <article>
-                <img src="{{ article.Images.[0].url_fullxfull }}" alt="Whiskey">
+                <div class="crop"><img src="{{ article.Images.[0].url_fullxfull }}" alt="Whiskey"></div>
                 <h2>{{ article.title }}</h2>
                 <a href ="{{ url }}">{{ article.Shop.shop_name }}</a>
                 <div class="price">{{ article.price }} {{ article.currency_code }}</div>
