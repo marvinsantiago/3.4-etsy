@@ -30,7 +30,7 @@
     <div class="main-body">
         <div class="left-column">
             <h6>Show results for:</h6>
-            <div class="categories">
+            <div class="bar">
             <h6>All Categories</h6>
             <ul>
             <li><a href="#">Home &amp; Living</a></li>
@@ -51,21 +51,60 @@
             </ul>
             </div>
 
-            <div class="refinesearch">
-                <span>Item Type</span>
-                <form>
-                    <input type="radio" name="item" value="All Items" checked>All Items<br>
-                   <input type="radio" name="item" value="Handmade" checked>Handmade<br>
-                   <input type="radio" name="item" value="Vintage" checked>Vintage<br>
-                </form>
-                <div class="price">
-                    <span>Price</span>
+        <div class="bar">
+            <div class="section">
+                <p>Item Type</p>
+                <ul>
+                    <li><label><input type="radio" checked="checked"><a href="#">All Items</a></label></li>
+                    <li><label><input type="radio"><a href="#">Handmade</a></label></li>
+                    <li><label><input type="radio"><a href="#">Vintage</a></label></li>
+                </ul>
+            </div>
+                <div class="section">
+                    <p>Price</p>
                         <div class="low">
-                            <input type="text" value="$ Low">
-                            <span> to</span>
-                            <input type="text" value="$ High">
+                            <div class="input">
+                            <input type="text" placeholder="$ Low">
+                            </div>
+                            <p>to</p>
+                            <div class="input">
+                            <input type="text" placeholder="$ High">
+                            </div>
+                            <div class="enter">
+                                <i class="fa fa-play"></i>
+                            </div>
                         </div>
-
+                </div>
+                <div class="section">
+                    <p>Filter by Color</p>
+                    <ul class="colors">
+                        <li class="red"></li>
+                        <li class="orange"></li>
+                        <li class="yellow"></li>
+                        <li class="green"></li>
+                        <li class="blue"></li>
+                        <li class="purple"></li>
+                        <li class="black"></li>
+                        <li class="white"></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Ordering option</p>
+                    <ul>
+                        <li><input type="checkbox"><a href="#">Accepts Etsy Gift Cards</a></li>
+                        <li><input type="checkbox"><a href="#">Customizable</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Shop Location</p>
+                    <ul>
+                        <li><label><input type="radio" checked="checked"><a href="#">Anywhere</a></label></li>
+                        <li><label><input type="radio"><a href="#">United States</a></label></li>
+                        <li><a href="#">Choose a custom location</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Ship To</p>
                 </div>
 
             </div>
@@ -89,6 +128,14 @@
     </div>
 
 <footer>
+    <div class="upperhalf">
+        <p>Get top trends and fresh editors' pick in your inbox with Etsy Finds.</p>
+        <form>
+            <input type="text" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </form>
+
+    </div>
     <div class="bottomhalf">
         <div class="firstcol">
         <ul>
