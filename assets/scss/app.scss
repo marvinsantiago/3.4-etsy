@@ -144,6 +144,9 @@ body {
             padding-left: 0.7em;
 
     }}
+    .input {
+        float: left;
+    }
     .colors {
         overflow: auto;
         margin: 10px 0;
@@ -201,8 +204,22 @@ body {
         font-size: 0.7em;
         img {
             width: 100%;
-            border-top-right-radius: 5px 5px;
-            border-top-left-radius: 5px 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .crop {
+            position: relative;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+        .crop:before {
+            content: "";
+            display: block;
+            padding-top: 65%;
         }
         h2 {
             padding-bottom: 5px;
