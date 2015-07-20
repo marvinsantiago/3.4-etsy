@@ -1986,7 +1986,9 @@ body {
       background: white;
       padding: 5px 0;
       margin-bottom: 30px;
-      border-bottom: 1px solid #EAEAEA; }
+      border-bottom: 1px solid #EAEAEA;
+      line-height: 1.5em;
+      padding-left: 0.7em; }
   .main-body .colors {
     overflow: auto;
     margin: 10px 0; }
