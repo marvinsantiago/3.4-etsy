@@ -134,7 +134,7 @@ body {
             font-weight: strong;
         }
 
-        .bar {
+        .side-bar {
             border: 2px solid #EAEAEA;
             background: white;
             padding: 5px 0;
@@ -144,6 +144,11 @@ body {
             padding-left: 0.7em;
 
     }}
+    .section {
+        border-bottom: 2px solid #EAEAEA;
+        padding: 10px 0;
+        margin: auto;
+    }
     .input {
         float: left;
     }
@@ -188,6 +193,7 @@ body {
     .listings {
         @include span-columns(9);
         @include omega();
+        margin-top: 35px;
     }
 
     article {
