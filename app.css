@@ -1981,7 +1981,7 @@ body {
       color: #0192B5; }
     .main-body .left-column h6 {
       font-weight: strong; }
-    .main-body .left-column .bar {
+    .main-body .left-column .side-bar {
       border: 2px solid #EAEAEA;
       background: white;
       padding: 5px 0;
@@ -1989,6 +1989,10 @@ body {
       border-bottom: 1px solid #EAEAEA;
       line-height: 1.5em;
       padding-left: 0.7em; }
+  .main-body .section {
+    border-bottom: 2px solid #EAEAEA;
+    padding: 10px 0;
+    margin: auto; }
   .main-body .input {
     float: left; }
   .main-body .colors {
@@ -2022,7 +2026,8 @@ body {
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-top: 35px; }
     .main-body .listings:last-child {
       margin-right: 0; }
   .main-body article {
