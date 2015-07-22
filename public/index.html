@@ -8,6 +8,191 @@
     <title>Etsy</title>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="left-side">
+        <h1 id="logo">Etsy</h1>
+    <div id="tfheader">
+        <form id="tfnewsearch" method="get" action="http://www.google.com">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+        </form>
+        <div class='tfclear'></div>
+        </div>
+        <div class="browse"><span>Browse</span></div>
+        </div>
+
+        <div class="right-side">
+            <span>Register</span>
+            <span id="signin">Sign In</span>
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+    </div>
+
+    <div class="main-body">
+        <div class="left-column">
+            <h6>Show results for:</h6>
+            <div class="side-bar">
+            <h6>All Categories</h6>
+            <ul>
+            <li><a href="#">Home &amp; Living</a></li>
+            <li><a href="#">Art &amp; Collectibles</a></li>
+            <li><a href="#">Weddings</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Paper &amp; Party Supplies</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Craft Supplies &amp; Tools</a></li>
+            <li><a href="#">Bags &amp; Purses</a></li>
+            <li><a href="#">Bath &amp; Beauty</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Books, Movies &amp; Music</a></li>
+            <li><a href="#">Electoronics &amp; Accessories</a></li>
+            <li><a href="#">Pet Supplies</a></li>
+            <li><a href="#">Toys &amp; Games</a></li>
+            </ul>
+            </div>
+
+        <div class="side-bar">
+            <div class="section">
+                <p>Item Type</p>
+                <ul>
+                    <li><label><input type="radio" checked="checked"><a href="#">All Items</a></label></li>
+                    <li><label><input type="radio"><a href="#">Handmade</a></label></li>
+                    <li><label><input type="radio"><a href="#">Vintage</a></label></li>
+                </ul>
+            </div>
+                <div class="section">
+                    <p>Price</p>
+                        <div class="low">
+                            <div class="input">
+                            <input type="text" placeholder="$ Low">
+                            </div>
+                            <p>to</p>
+                            <div class="input">
+                            <input type="text" placeholder="$ High">
+                            </div>
+                            <div class="enter">
+                                <i class="fa fa-play"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="section">
+                    <p>Filter by Color</p>
+                    <ul class="colors">
+                        <li class="red"></li>
+                        <li class="orange"></li>
+                        <li class="yellow"></li>
+                        <li class="green"></li>
+                        <li class="blue"></li>
+                        <li class="purple"></li>
+                        <li class="black"></li>
+                        <li class="white"></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Ordering option</p>
+                    <ul>
+                        <li><input type="checkbox"><a href="#">Accepts Etsy Gift Cards</a></li>
+                        <li><input type="checkbox"><a href="#">Customizable</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Shop Location</p>
+                    <ul>
+                        <li><label><input type="radio" checked="checked"><a href="#">Anywhere</a></label></li>
+                        <li><label><input type="radio"><a href="#">United States</a></label></li>
+                        <li><a href="#">Choose a custom location</a></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <p>Ship To</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="listings"></div>
+
+        <template id="main-template">
+            {{#each results}}
+                {{> article article=this }}
+            {{/each}}
+        </template>
+
+        <template id="article-partial">
+            <article>
+                <div class="crop"><img src="{{ article.Images.[0].url_fullxfull }}" alt="Whiskey"></div>
+                <h2>{{ article.title }}</h2>
+                <a href ="{{ url }}">{{ article.Shop.shop_name }}</a>
+                <div class="price">{{ article.price }} {{ article.currency_code }}</div>
+            </article>
+        </template>
+    </div>
+
+<footer>
+    <div class="upperhalf">
+        <p>Get top trends and fresh editors' pick in your inbox with Etsy Finds.</p>
+        <form>
+            <input type="text" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </form>
+
+    </div>
+    <div class="bottomhalf">
+        <div class="firstcol">
+        <ul>
+        <li class="title">Turn Your Passion into a Business</li>
+        <li><button>Open a Shop</button></li>
+            <li class="title">Sell on Etsy</li>
+            <li><a href="https://www.etsy.com/seller-handbook/?ref=ftr">Seller Handbook</a></li>
+            <li><a href="https://www.etsy.com/reader?ref=ftr">Etsy Credit Card Reader</a></li>
+        </ul>
+        </div>
+        <div class="seccol">
+        <ul>
+            <li class="title">Join the Community</li>
+            <li><a href="https://www.etsy.com/teams/?ref=ftr">Teams</a></li>
+            <li><a href="https://www.etsy.com/forums/?ref=ftr">Forums</a></li>
+            <li><a href="https://www.etsy.com/community/events/?ref=ftr">Upcoming Events</a></li>
+            <li><a href="https://www.etsy.com/affiliates?ref=ftr">Affiliates</a></li>
+        </ul>
+        </div>
+        <div class="thirdcol">
+        <ul>
+            <li class="title">Discover and Shop</li>
+            <li><a href="https://www.etsy.com/giftcards/?ref=ftr">Gift Cards</a></li>
+            <li><a href="https://www.etsy.com/blog/en/?ref=ftr">Blog</a></li>
+            <li><a href="https://www.etsy.com/pages/?ref=ftr">Tastemakers</a></li>
+            <li><a href="https://www.etsy.com/mobile/?ref=ftr">Mobile Apps</a></li>
+            <li><a href="https://www.etsy.com/registry/?ref=ftr">Gift Registries</a></li>
+            <li><a href="https://www.etsy.com/wholesale?ref=ftr">Wholesale</a></li>
+            <li><a href="https://www.etsy.com/search?ref=ftr">Search</a></li>
+            <li><a href="https://www.etsy.com/etsy-finds/?ref=ftr">Etsy Finds</a></li>
+        </ul>
+        </div>
+        <div class="fourcol">
+            <ul>
+                <li class="title">Get to Know Us</li>
+                <li><a href="https://www.etsy.com/about/?ref=ftr">About</a></li>
+                <li><a href="https://www.etsy.com/careers/?ref=ftr">Careers</a></li>
+                <li><a href="https://www.etsy.com/press/?ref=ftr">Press</a></li>
+                <li><a href="https://www.etsy.com/developers/?ref=ftr">Developers</a></li>
+                <li><a href="http://investors.etsy.com/">Investors</a></li>
+            </ul>
+        </div>
+        <div class="fifthcol">
+            <ul>
+                <li class="title">Follow Etsy</li>
+                <li><i class="fa fa-facebook-official"></i>Facebook</li>
+                <li><i class="fa fa-twitter-square"></i>Twitter</li>
+                <li><i class="fa fa-pinterest-square"></i>Pinterest</li>
+                <li><i class="fa fa-instagram"></i>Instagram</li>
+
+            </ul>
+        </div>
+    </div>
+
+
+</footer>
+
 
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="handlebars/handlebars.js"></script>
